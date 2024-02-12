@@ -15,7 +15,6 @@ import static com.test.TestCases.TestRunnerWeb.*;
 public class SwagLabsLoginPage extends LoginPageWebElements {
     public SwagLabsLoginPage(WebDriver driver) {
         PageFactory.initElements(driver, this);
-
     }
 
 
