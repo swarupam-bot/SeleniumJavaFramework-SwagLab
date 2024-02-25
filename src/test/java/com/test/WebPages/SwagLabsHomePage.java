@@ -4,6 +4,8 @@ import com.test.Utils.swagLabsWebUtils;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.Reporter;
+
 import java.util.ArrayList;
 import java.util.List;
 import static com.test.TestCases.TestRunnerWeb.config;
@@ -50,8 +52,10 @@ public class SwagLabsHomePage {
             i++;
             ele.click();
             System.out.println("Added "+i+" item to the cart");
+            Reporter.log("Added "+i+" item to the cart");
         }
-        System.out.println("Total items added in cart = "+i);
+        System.out.println();
+        Reporter.log("Total items added in cart = "+i);
 
         swagLabsWebUtils.checkOutPages(config.getProperty("Fname"), config.getProperty("Lname"), config.getProperty("ZCode"));
 

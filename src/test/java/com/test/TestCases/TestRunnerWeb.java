@@ -1,8 +1,6 @@
 package com.test.TestCases;
 
 import com.test.DriverSetup.*;
-import com.test.Utils.ExtentReporterUtil;
-import com.test.Utils.swagLabsWebUtils;
 import com.test.WebPages.*;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;

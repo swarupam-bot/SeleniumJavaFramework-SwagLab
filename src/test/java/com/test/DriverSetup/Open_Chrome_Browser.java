@@ -8,6 +8,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Reporter;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
 
 import java.util.concurrent.TimeUnit;
 
@@ -19,7 +20,8 @@ public class Open_Chrome_Browser {
     @BeforeTest
     public void openChromeBrowser()
     {
-        WebDriverManager.chromedriver().setup();
+      //  WebDriverManager.chromedriver().setup();
+        System.setProperty("webdriver.chrome.driver","/Users/swarupamkumar/IdeaProjects/SwagLabs_DemoTest/Driver/chromedriver");
 
         driver=new ChromeDriver();
 
@@ -31,9 +33,12 @@ public class Open_Chrome_Browser {
 
         String fileName = "test-report.html";
         extent=ExtentReporterUtil.createInstance(fileName);
-
         extent.createTest("first test","able to login browser");
+
+
         Reporter.log("hello ");
+
+
     }
 
 
