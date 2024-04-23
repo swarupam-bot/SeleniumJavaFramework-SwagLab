@@ -22,8 +22,6 @@ public class TestRunnerWeb extends Open_Chrome_Browser {
         fis = new FileInputStream("/Users/swarupamkumar/IdeaProjects/SwagLabs_DemoTest/src/test/java/com/test/Utils/testData.properties");
         config.load(fis);
         System.out.println("Test data loaded successfully.");
-
-
     }
 
     @BeforeMethod
@@ -33,8 +31,6 @@ public class TestRunnerWeb extends Open_Chrome_Browser {
 
         System.out.println("relaunching the login page for next test");
     }
-
-
 
     @Test(priority = 1,enabled = true)
     public void TC_Check_LoginFunctionality_With_vailedUserName_And_UnVailedPassword() {

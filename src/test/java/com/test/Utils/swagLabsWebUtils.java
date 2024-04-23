@@ -13,6 +13,7 @@ public class swagLabsWebUtils extends LoginPageWebElements {
         CommonUtilsWeb.sendTextToTextBox(LPageUsernameElement, username);
         CommonUtilsWeb.sendTextToTextBox(LPagePasswordElement, password);
         CommonUtilsWeb.ClickOnButton(LPageLoginBtnElement);
+
     }
 
     public static void checkOutPages(String Fname, String LName, String ZipCode) {

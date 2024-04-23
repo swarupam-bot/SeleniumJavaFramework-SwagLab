@@ -22,8 +22,6 @@ public class SwagLabsLoginPage extends LoginPageWebElements {
         System.out.println("Try to login with vailed username and invailed password");
         swagLabsWebUtils.LoginHomePage(config.getProperty("username"), config.getProperty("wrongPassword"));
         Assert.assertEquals(config.getProperty("errorMsg"), LPageErrorTextElement.getText());
-        ExtentTest test=extent.createTest("Try to login with vailed username and invailed password");
-        test.pass("test is pass");
     }
 
     public static void Login_With_UnvailedUesrName_And_vailedPass() {
