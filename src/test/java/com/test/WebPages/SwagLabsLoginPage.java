@@ -16,6 +16,7 @@ public class SwagLabsLoginPage extends LoginPageWebElements {
         System.out.println(LPageUsernameElement);
         CommonUtilsWeb.sendTextToTextBox(LPageUsernameElement, username);
     }
+
     public static void LoginPageEnterPassword(String password) {
         System.out.println(LPagePasswordElement);
         CommonUtilsWeb.sendTextToTextBox(LPagePasswordElement, password);
@@ -26,10 +27,10 @@ public class SwagLabsLoginPage extends LoginPageWebElements {
         CommonUtilsWeb.ClickOnButton(LPageLoginBtnElement);
 
     }
-    public static String LoginPageErrorMessage()
-     {
-         return LPageErrorTextElement.getText();
-     }
+
+    public static String LoginPageErrorMessage() {
+        return LPageErrorTextElement.getText();
+    }
 
     public static void LoginHomeWithCredentials(String username, String password) {
         System.out.println(LPageUsernameElement);

@@ -14,9 +14,11 @@ public class CheckOutPage {
     public static void fillFirstName(String Fname) {
         CommonUtilsWeb.sendTextToTextBox(CPageInfoTextBoxesElement.get(0), Fname);
     }
+
     public static void fillLastName(String LName) {
         CommonUtilsWeb.sendTextToTextBox(CPageInfoTextBoxesElement.get(1), LName);
     }
+
     public static void fillZipCodeName(String ZipCode) {
         CommonUtilsWeb.sendTextToTextBox(CPageInfoTextBoxesElement.get(2), ZipCode);
     }
@@ -25,6 +27,7 @@ public class CheckOutPage {
         CommonUtilsWeb.ClickOnButton(CPageInfoContinueElement);
 
     }
+
     public static void clickOnFinishBtn() {
         CommonUtilsWeb.ClickOnButton(CPageFINISHBtnElement);
     }

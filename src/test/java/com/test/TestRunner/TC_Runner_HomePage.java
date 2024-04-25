@@ -47,20 +47,20 @@ public class TC_Runner_HomePage extends Open_Chrome_Browser {
 
 
     }
+
     @Test(priority = 4)
     public void TC_Buy_All_Items_And_CheckOut() {
         SwagLabsLoginPage.LoginHomeWithCredentials(config.getProperty("username"), config.getProperty("password"));
-        int i=0;
+        int i = 0;
         List<WebElement> AddToCartList = HPageAddToCartElement;
-        for (WebElement ele:AddToCartList)
-        {
+        for (WebElement ele : AddToCartList) {
             i++;
             ele.click();
-            System.out.println("Added "+i+" item to the cart");
-            Reporter.log("Added "+i+" item to the cart");
+            System.out.println("Added " + i + " item to the cart");
+            Reporter.log("Added " + i + " item to the cart");
         }
         System.out.println();
-        Reporter.log("Total items added in cart = "+i);
+        Reporter.log("Total items added in cart = " + i);
 
         SwagLabsHomePage.clickOnCartBtn();
         SwagLabsHomePage.clickOnCheckOutBtn();

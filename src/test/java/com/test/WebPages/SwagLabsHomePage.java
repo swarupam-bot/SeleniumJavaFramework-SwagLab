@@ -4,7 +4,8 @@ import com.test.Utils.CommonUtilsWeb;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 
-import static com.test.WebElements.HomePageWebElements.*;
+import static com.test.WebElements.HomePageWebElements.CPageCheckOutBtnElement;
+import static com.test.WebElements.HomePageWebElements.HPageCartElement;
 
 
 public class SwagLabsHomePage {
@@ -15,6 +16,7 @@ public class SwagLabsHomePage {
     public static void clickOnCartBtn() {
         CommonUtilsWeb.ClickOnButton(HPageCartElement);
     }
+
     public static void clickOnCheckOutBtn() {
         CommonUtilsWeb.ClickOnButton(CPageCheckOutBtnElement);
     }
