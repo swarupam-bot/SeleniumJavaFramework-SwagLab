@@ -1,33 +1,42 @@
 package com.test.WebPages;
 
-import com.aventstack.extentreports.ExtentReports;
-import com.aventstack.extentreports.ExtentTest;
-import com.aventstack.extentreports.reporter.ExtentReporter;
-import com.test.Utils.swagLabsWebUtils;
+
+import com.test.Utils.CommonUtilsWeb;
 import com.test.WebElements.LoginPageWebElements;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
-import org.testng.Assert;
-import org.testng.Reporter;
 
-import static com.test.TestCases.TestRunnerWeb.*;
 
 public class SwagLabsLoginPage extends LoginPageWebElements {
     public SwagLabsLoginPage(WebDriver driver) {
         PageFactory.initElements(driver, this);
     }
 
-
-    public static void Login_With_VailedUesrName_And_UnvailedPass() {
-        System.out.println("Try to login with vailed username and invailed password");
-        swagLabsWebUtils.LoginHomePage(config.getProperty("username"), config.getProperty("wrongPassword"));
-        Assert.assertEquals(config.getProperty("errorMsg"), LPageErrorTextElement.getText());
+    public static void LoginPageEnterUserName(String username) {
+        System.out.println(LPageUsernameElement);
+        CommonUtilsWeb.sendTextToTextBox(LPageUsernameElement, username);
+    }
+    public static void LoginPageEnterPassword(String password) {
+        System.out.println(LPagePasswordElement);
+        CommonUtilsWeb.sendTextToTextBox(LPagePasswordElement, password);
     }
 
-    public static void Login_With_UnvailedUesrName_And_vailedPass() {
-        System.out.println("Try to login with vailed username and invailed password");
-        swagLabsWebUtils.LoginHomePage(config.getProperty("wrongUsername"), config.getProperty("password"));
-        System.out.println(LPageErrorTextElement.getText());
-        Assert.assertEquals(config.getProperty("errorMsg"), LPageErrorTextElement.getText());
+    public static void LoginPageClickOnLoginButton() {
+        System.out.println(LPageLoginBtnElement);
+        CommonUtilsWeb.ClickOnButton(LPageLoginBtnElement);
+
     }
+    public static String LoginPageErrorMessage()
+     {
+         return LPageErrorTextElement.getText();
+     }
+
+    public static void LoginHomeWithCredentials(String username, String password) {
+        System.out.println(LPageUsernameElement);
+        CommonUtilsWeb.sendTextToTextBox(LPageUsernameElement, username);
+        CommonUtilsWeb.sendTextToTextBox(LPagePasswordElement, password);
+        CommonUtilsWeb.ClickOnButton(LPageLoginBtnElement);
+
+    }
+
 }

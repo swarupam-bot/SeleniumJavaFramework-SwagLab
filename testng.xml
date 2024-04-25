@@ -6,7 +6,7 @@
     </listeners>
     <test verbose="2" preserve-order="true" name="/Users/swarupamkumar/IdeaProjects/SwagLabs_DemoTest">
         <classes>
-            <class name="com.test.TestCases.TestRunnerWeb">
+            <class name="com.test.TestRunner.TestRunnerWeb">
                 <methods>
                     <include name="TC_Check_LoginFunctionality_With_vailedUserName_And_UnVailedPassword"/>
                     <include name="TC_Check_LoginFunctionality_With_UnvailedUserName_And_VailedPassword"/>
