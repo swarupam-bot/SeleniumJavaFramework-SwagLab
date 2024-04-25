@@ -1,50 +1,22 @@
 package com.test.TestRunner;
 
-import com.test.DriverSetup.*;
-import com.test.WebPages.*;
+import com.test.DriverSetup.Open_Chrome_Browser;
+import com.test.WebPages.CheckOutPage;
+import com.test.WebPages.SwagLabsHomePage;
+import com.test.WebPages.SwagLabsLoginPage;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.Reporter;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import java.io.FileInputStream;
-
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Properties;
 
+import static com.test.WebElements.CheckOutPageWebElements.CPageVerifyTextElement;
 import static com.test.WebElements.HomePageWebElements.HPageAddToCartElement;
 import static com.test.WebElements.HomePageWebElements.HPageProductPriceElement;
-import static com.test.WebElements.CheckOutPageWebElements.CPageVerifyTextElement;
 
-
-public class TestRunnerWeb extends Open_Chrome_Browser {
-
-
-
-    @Test(priority = 1,enabled = true)
-    public void TC_Check_LoginFunctionality_With_vailedUserName_And_UnVailedPassword() {
-        System.out.println("Try to login with vailed username and invailed password");
-        SwagLabsLoginPage.LoginPageEnterUserName(config.getProperty("username"));
-        SwagLabsLoginPage.LoginPageEnterPassword(config.getProperty("wrongPassword"));
-        SwagLabsLoginPage.LoginPageClickOnLoginButton();
-        String ActualErrorText=SwagLabsLoginPage.LoginPageErrorMessage();
-        Assert.assertEquals(ActualErrorText,config.getProperty("errorMsg"));
-
-
-    }
-    @Test(priority = 2,enabled = true)
-    public void TC_Check_LoginFunctionality_With_UnvailedUserName_And_VailedPassword() {
-        SwagLabsLoginPage.LoginPageEnterUserName(config.getProperty("wrongUsername"));
-        SwagLabsLoginPage.LoginPageEnterPassword(config.getProperty("password"));
-        SwagLabsLoginPage.LoginPageClickOnLoginButton();
-        String ActualErrorText=SwagLabsLoginPage.LoginPageErrorMessage();
-        Assert.assertEquals(ActualErrorText,config.getProperty("errorMsg"));
-    }
-
+public class TC_Runner_HomePage extends Open_Chrome_Browser {
     @Test(priority = 3)
     public void TC_Buy_A_Higest_Price_Item_And_CheckOut() {
         SwagLabsLoginPage.LoginHomeWithCredentials(config.getProperty("username"), config.getProperty("password"));
@@ -60,7 +32,6 @@ public class TestRunnerWeb extends Open_Chrome_Browser {
             if (a > temp) {
                 temp = a;
                 i = AllPrice.indexOf(temp);
-
             }
         }
         AddToCartList.get(i).click();
@@ -102,6 +73,4 @@ public class TestRunnerWeb extends Open_Chrome_Browser {
 
 
     }
-
-
 }

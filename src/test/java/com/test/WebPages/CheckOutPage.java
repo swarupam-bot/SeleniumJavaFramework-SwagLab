@@ -3,11 +3,8 @@ package com.test.WebPages;
 import com.test.Utils.CommonUtilsWeb;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
-import org.testng.Assert;
 
-import static com.test.TestRunner.TestRunnerWeb.config;
 import static com.test.WebElements.CheckOutPageWebElements.*;
-import static com.test.WebElements.CheckOutPageWebElements.CPageVerifyTextElement;
 
 public class CheckOutPage {
     public CheckOutPage(WebDriver driver) {

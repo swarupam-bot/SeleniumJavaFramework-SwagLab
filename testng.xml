@@ -1,15 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="All Test Suite">
-    <listeners>
-        <listener class-name="com.test.Utils.ReporterListener"></listener>
-    </listeners>
-    <test verbose="2" preserve-order="true" name="/Users/swarupamkumar/IdeaProjects/SwagLabs_DemoTest">
+    <test verbose="2" preserve-order="true"
+          name="/Users/swarupamkumar/IdeaProjects/SwagLabs_DemoTest/src/test/java/com/test/TestRunner">
         <classes>
-            <class name="com.test.TestRunner.TestRunnerWeb">
+            <class name="com.test.TestRunner.TC_Runner_LoginPage">
                 <methods>
                     <include name="TC_Check_LoginFunctionality_With_vailedUserName_And_UnVailedPassword"/>
                     <include name="TC_Check_LoginFunctionality_With_UnvailedUserName_And_VailedPassword"/>
+                    <include name="TC_Buy_A_Higest_Price_Item_And_CheckOut"/>
+                    <include name="TC_Buy_All_Items_And_CheckOut"/>
+                </methods>
+            </class>
+            <class name="com.test.TestRunner.TC_Runner_HomePage">
+                <methods>
                     <include name="TC_Buy_A_Higest_Price_Item_And_CheckOut"/>
                     <include name="TC_Buy_All_Items_And_CheckOut"/>
                 </methods>
