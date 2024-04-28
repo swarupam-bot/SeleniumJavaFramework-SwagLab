@@ -38,7 +38,7 @@ public class Open_Chrome_Browser {
     }
 
     @BeforeTest
-    public void openChromeBrowser()
+    public  void openChromeBrowser()
     {
         WebDriverManager.chromedriver().setup();
       //  System.setProperty("webdriver.chrome.driver","/Users/swarupamkumar/IdeaProjects/SwagLabs_DemoTest/Driver/chromedriver");
