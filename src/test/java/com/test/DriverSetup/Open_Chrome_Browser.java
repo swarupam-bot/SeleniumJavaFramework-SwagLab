@@ -61,6 +61,7 @@ public class Open_Chrome_Browser {
     @AfterTest
     public void close(){
         //extent.flush();
+        System.out.println("closing the Drivers");
         driver.close();
 
 
