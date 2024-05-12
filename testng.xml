@@ -14,10 +14,12 @@
             </class>
             <class name="com.test.TestRunner.TC_Runner_HomePage">
                 <methods>
-                    <include name="TC_Buy_A_Higest_Price_Item_And_CheckOut"/>
+                     <include name="TC_Buy_A_Higest_Price_Item_And_CheckOut"/>
                     <include name="TC_Buy_All_Items_And_CheckOut"/>
                 </methods>
             </class>
+
+
         </classes>
     </test>
 </suite>
